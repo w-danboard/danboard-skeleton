@@ -1,5 +1,6 @@
 <template>
   <div class="app-main">
+    <appHeader/>
     <!-- 打开页面 -->
     <el-input placeholder="请输入访问页面地址" v-model="formData.address">
       <template slot="prepend">Http://</template>
@@ -8,8 +9,13 @@
   </div>
 </template>
 <script>
+import appHeader from '@/views/layouts/app-header.vue'
+
 export default {
   name: 'app-main',
+  components: {
+    appHeader
+  },
   data () {
     return {
       formData: {

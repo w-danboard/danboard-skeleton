@@ -2,6 +2,7 @@ import Vue from 'vue'
 import App from './App.vue'
 import ElementUI from 'element-ui'
 import locale from 'element-ui/lib/locale/lang/zh-CN'
+import router from './views/router/index.js'
 import appConfig from '../app.config'          // 系统全局配置
 
 import Request from './request' //请求封装
@@ -16,5 +17,6 @@ Vue.use(Request)
 Vue.prototype.$config = appConfig
 
 new Vue({
+  router,
   render: h => h(App),
 }).$mount('#app')

@@ -1,20 +1,12 @@
 <template>
   <div id="app">
-    <appHeader/>
-    <Main/>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import appHeader from './views/layouts/app-header.vue'
-import Main from './views/main/index.vue'
-
 export default {
-  name: 'App',
-  components: {
-    appHeader,
-    Main
-  }
+  name: 'App'
 }
 </script>
 
