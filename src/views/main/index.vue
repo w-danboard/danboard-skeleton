@@ -1,11 +1,35 @@
 <template>
   <div class="app-main">
-    d
+    <!-- 打开页面 -->
+    <el-input placeholder="请输入访问页面地址" v-model="formData.address">
+      <template slot="prepend">Http://</template>
+      <el-button slot="append" type="text" @click="open">访问</el-button>
+    </el-input>
   </div>
 </template>
 <script>
 export default {
-  
+  name: 'app-main',
+  data () {
+    return {
+      formData: {
+        address: ''
+      }
+    }
+  },
+  methods: {
+    // 访问
+    async open () {
+      const { address } = this.formData;
+      await this.$request({
+        url: 'api/haha',
+        method: 'post',
+        data: {
+          address
+        }
+      })
+    }
+  }
 }
 </script>
 <style scoped>

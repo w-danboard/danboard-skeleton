@@ -30,7 +30,7 @@ export default {
 }
 
 .logo-wrap {
-    width: 230px;
+    width: 220px;
     background: #2f323d;
     padding-left: 1px;
 }
@@ -38,7 +38,7 @@ export default {
 .logo-icon {
   display: inline-block;
   vertical-align: middle;
-  margin: 0 var(--margin-mini);
+  margin: 0 5px 0 15px;
 }
 
 .logo-text {
